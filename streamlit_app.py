@@ -183,9 +183,9 @@ elif role == "Receiver":
                         plaintext = decrypt_message(enc_msg, ecc_private_key, rsa_private_key)
                         with st.sidebar:
                             add_sender=st.markdown("## Message from:")
-                            add_sender=st.write(f"{sender_key}")
+                            add_sender=st.info(f"{sender_key}")
                             add_ciphertext=st.markdown("## Ciphertext:")
-                            add_ciphertext=st.write(f"{base64.b64encode(ciphertext).decode('utf-8')}")
+                            add_ciphertext=st.info(f"{base64.b64encode(ciphertext).decode('utf-8')}")
                         st.text_area("Decrypted Message", plaintext)
                     except Exception as e:
                         st.error(f"Failed to decrypt a message: {e}")
