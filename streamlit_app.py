@@ -12,7 +12,7 @@ import base64
 
 def create_copy_button(text_to_copy):
     button_id = "copyButton" + text_to_copy
-    
+    print(text_to_copy)
     button_html = f"""<button id="{button_id}">Copy</button>
     <script>
     document.getElementById("{button_id}").onclick = function() {{
