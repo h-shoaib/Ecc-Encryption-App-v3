@@ -160,12 +160,12 @@ elif role == "Receiver":
 
         st.write("Your ECC Public Key:")
         st.text_area("ECC Public Key", public_key_display)
-        create_copy_button(st.session_state.public_key_display)
+        create_copy_button(public_key_display)
         
 
         st.write("Your RSA Public Key:")
         st.text_area("RSA Public Key", rsa_public_key_display)
-        create_copy_button(st.session_state.rsa_public_key_display)
+        create_copy_button(rsa_public_key_display)
         
 
         receiver_key = public_key_display
