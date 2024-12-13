@@ -92,6 +92,7 @@ def decrypt_message(enc_msg, ecc_private_key, rsa_private_key):
 
 # Streamlit app
 st.title("Secure Messaging App")
+st.sidebar.markdown("# Information)
 role = st.radio("Select your role:", ("Sender", "Receiver"))
 
 if "keys" not in st.session_state:
