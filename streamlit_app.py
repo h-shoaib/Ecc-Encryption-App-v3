@@ -49,6 +49,7 @@ init_db()
 # ECC and RSA key generation
 def generate_ecc_key_pair():
     curve = registry.get_curve('brainpoolP256r1')
+    add_curve= st.sidebar.info(f"ECC Curve: {curve.name}}")
     private_key = secrets.randbelow(curve.field.n)
     public_key = private_key * curve.g
     return private_key, public_key
